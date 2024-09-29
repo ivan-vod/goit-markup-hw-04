@@ -596,6 +596,7 @@ button {
     line-height: 1.5;
     /* 150% */
     letter-spacing: 0.32px;
+    /* margin-bottom: 16px; */
 }
 
 .footer-socials-wrapper {
@@ -607,7 +608,7 @@ button {
 }
 
 .footer-socials-title {
-    margin-bottom: 16px;
+    margin: 0 0 16px 0;
     color: rgb(var(--WHITE, #FFF));
 
     /* Body Medium */
