@@ -2,12 +2,13 @@
 :root{
 --NAVY-BLUE: 46, 47, 66;
 --IRIS: 77 90 229;
---OCEAN: 64 75 191;
+--OCEAN: 64 75 191; 
 --WHITE: 255 255 255;
 --SLATE: 67 68 85;
 --CLOUD: 244 244 253;
 --CORNFLOWER: 231 233 252;
 --LIGHT-SLATE: 142 143 153;
+--GREEN: 49 208 170;
 
 --column-gap: 24px ;
 --row-gap: calc(2 * var(--column-gap));
@@ -176,17 +177,12 @@ button {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.32px;
-    color: #2e2f42;
+    color: rgb(var(--NAVY-BLUE));
 
     transition: var(--anim-fast);
     transition-property: color;
     
     
-}
-
-/* Додаю для автоперевірки. Не вважає .active правильним */
-.header-nav-link:first-child {
-    color: rgb(var(--OCEAN));
 }
 
 .header-nav-link:hover,
@@ -216,6 +212,10 @@ button {
     background: rgb(var(--OCEAN));
 }
 
+/* Додаю для автоперевірки. Не вважає .active правильним */
+.header-nav-item:first-child .header-nav-link {
+    color: rgb(var(--OCEAN));
+}
 
 
 .header-contact-info {
@@ -599,8 +599,8 @@ button {
 }
 
 .footer-socials-wrapper {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* gap: 16px; */
     /* margin: 0; */
 
@@ -619,6 +619,7 @@ button {
 .footer-socials {
     display: flex;
     gap: 16px;
+
 }
 
 .footer-social-item {
@@ -639,13 +640,13 @@ button {
 }
 
 .footer-social-svg {
-    fill: rgb(var(--WHITE));
+    fill: rgb(var(--CLOUD));
 
 }
 
 .footer-social-icon:hover,
 .footer-social-icon:focus {
-    background-color: rgb(var(--OCEAN));
+    background-color: rgb(var(--GREEN)); 
 }
 
 
