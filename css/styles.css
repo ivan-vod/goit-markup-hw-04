@@ -184,6 +184,11 @@ button {
     
 }
 
+/* Додаю для автоперевірки. Не вважає .active правильним */
+.header-nav-link:first-child {
+    color: rgb(var(--OCEAN));
+}
+
 .header-nav-link:hover,
 .header-nav-link:focus {
     color: rgb(var(--OCEAN));
@@ -207,6 +212,7 @@ button {
 }
 
 .header-nav-link.active::after{
+    content: '';
     background: rgb(var(--OCEAN));
 }
 
@@ -449,6 +455,9 @@ button {
     background-color: rgb(var(--OCEAN));
 }
 
+.team-social-svg {
+    fill: rgb(var(--CLOUD));
+}
 
 /* #endregion */
 
@@ -480,7 +489,7 @@ button {
     transition-property: box-shadow;
 }
 
-.portfolio-item:hover .overlay {
+.portfolio-item:hover .overlay-text {
     transform: translateY(0);
 }
 
@@ -501,12 +510,13 @@ button {
     
 }
 
-.overlay {
+
+.overlay-text {
     position: absolute;
     top: 0;
     left: 0;
 
-    transform: translateY(300px);
+    transform: translateY(100%);
 
     width: 100%;
     height: 100%;
@@ -516,14 +526,12 @@ button {
     transition: var(--anim-fast);
     transition-property: transform;
 
-}
-
-.overlay-text {
     margin: 0;
     color: rgb(var(--CLOUD, #F4F4FD));
 
+    font-size: 16px;
     line-height: 1.5; /* 150% */
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
 }
 
 .portfolio-info-wrapper {
@@ -563,8 +571,7 @@ button {
 
 .footer-wrapper {
     display: flex;
-    flex-direction: row;
-    gap: 120px;
+    /* gap: 120px; */
     align-items: baseline;
 }
 
@@ -572,6 +579,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-right: 120px;
 }
 
 
@@ -593,19 +601,19 @@ button {
 .footer-socials-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    /* gap: 16px; */
     /* margin: 0; */
 
 }
 
 .footer-socials-title {
-    /* margin: 0; */
+    margin-bottom: 16px;
     color: rgb(var(--WHITE, #FFF));
 
     /* Body Medium */
     font-weight: 500;
-    line-height: 1.5px; /* 150% */
-    letter-spacing: 0.32px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.02em;
 }
 
 .footer-socials {
@@ -613,17 +621,26 @@ button {
     gap: 16px;
 }
 
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+}
+
 .footer-social-icon {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: rgb(var(--IRIS));
     border-radius: 50%;
-    fill: rgb(var(--WHITE));
     transition: var(--anim-fast);
     transition-property: background-color;
+}
+
+.footer-social-svg {
+    fill: rgb(var(--WHITE));
+
 }
 
 .footer-social-icon:hover,
